@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FormLabel, Input, Button } from '@chakra-ui/react';
 import api from '../../services/api';
 import Loader from '../../assets/loader.gif';
+import Styles from './index.module.css';
 
 const App = () => {
   const [data, setData] = useState({});
@@ -38,7 +39,7 @@ const App = () => {
 
   if (isLoad) {
     return (
-      <div className="loader">
+      <div className="loader animeLeft">
         <img src={Loader} alt="Loader" />
       </div>
     );
@@ -46,29 +47,28 @@ const App = () => {
 
   return (
     <div className="home-component">
-      <h1>Joke</h1>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <FormLabel>Search jokes</FormLabel>
-          <Input type="text" onChange={(e) => setSearchJoke(e.target.value)} />
-          <Button type="submit">Search</Button>
-        </form>
-      </div>
+      <form onSubmit={handleSubmit} className={Styles.form}>
+        <FormLabel className={Styles.label}>Search jokes</FormLabel>
+        <Input type="text" onChange={(e) => setSearchJoke(e.target.value)} />
+        <Button type="submit" className={Styles.button} variant="outline">
+          Search
+        </Button>
+      </form>
 
       {!isSearch ? (
-        <div className="jokes">
-          <img alt={data?.icon_url} src={data?.icon_url} />
-          <h3>{data?.value}</h3>
-        </div>
+        <main className={Styles.mainSingleJoke}>
+          <div className="jokes animeLeft">
+            <h3>{data?.value}</h3>
+          </div>
+        </main>
       ) : (
-        <>
+        <main className={Styles.main}>
           {allJokes?.result.map((item, index) => (
-            <div className="jokes" key={index}>
-              <img alt={item?.icon_url} src={item?.icon_url}></img>
+            <div className="jokes animeLeft" key={index}>
               <h3>{item?.value}</h3>
             </div>
           ))}
-        </>
+        </main>
       )}
     </div>
   );

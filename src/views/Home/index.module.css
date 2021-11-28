@@ -1,0 +1,20 @@
+.form {
+  height: 40%;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.label {
+  text-align: center !important;
+  margin-right: 0 !important;
+}
+
+.main {
+  margin: 50px 0;
+}
+
+.mainSingleJoke {
+  margin-top: 0px;
+}

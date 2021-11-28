@@ -1,3 +1,18 @@
 .header {
-  margin-top: 50px;
+  padding: 20px;
+  height: 30vh;
+}
+
+.logoContainer {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  margin-bottom: 20px;
 }

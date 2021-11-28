@@ -1,7 +1,12 @@
+import Styles from './index.module.css';
+import logoMeliuz from '../../assets/logo-meliuz.png';
+
 const Footer = () => {
   return (
-    <footer>
-      <h1>Footer</h1>
+    <footer className="footer animeLeftFooter">
+      <div className={Styles.logoMeliuz}>
+        <img src={logoMeliuz} alt="Logo Méliuz" />
+      </div>
     </footer>
   );
 };

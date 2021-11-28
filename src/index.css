@@ -3,31 +3,88 @@
   margin: 0;
   font-family: 'Lobster', cursive;
   font-size: 1.25rem;
+  color: #312b45;
 }
 
 .loader {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 70vh;
+  align-items: flex-start;
+  height: 60vh;
 }
 
 .home-component {
+  min-height: 60vh;
   text-align: center;
   width: 75%;
   margin: auto;
+  padding-top: 50px;
 }
 
 .home-component .jokes {
-  height: 500px;
+  height: 60%;
+  margin-bottom: 50px;
+}
+
+.home-component .jokes::after {
+  display: block;
+  content: '';
+  width: 200px;
+  height: 1px;
+  background: #ff0050;
+  margin: 5px auto 0;
+}
+
+.home-component .jokes h3 {
+  margin-top: 20px;
 }
 
 nav .logo {
-  height: 150px;
-  width: auto;
+  min-height: auto;
+  min-width: 120px;
 }
 
 footer {
   text-align: center;
-  height: 180px;
+  height: 10vh;
+  background: #ff0050;
+}
+
+.animeLeftHeader {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeftHeader 1s forwards;
+}
+
+@keyframes animeLeftHeader {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 1.5s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
+}
+
+.animeLeftFooter {
+  transform: translateX(-40px);
+  opacity: 0;
+  animation: animeLeftFooter 1s forwards;
+}
+
+@keyframes animeLeftFooter {
+  to {
+    transform: initial;
+    opacity: initial;
+  }
 }

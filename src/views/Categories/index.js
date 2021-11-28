@@ -5,6 +5,8 @@ import api from '../../services/api';
 
 import Loader from '../../assets/loader.gif';
 
+import Styles from './index.module.css';
+
 const Categories = (props) => {
   const [joke, setJoke] = useState({});
   const [isLoad, setIsLoad] = useState(false);
@@ -26,20 +28,19 @@ const Categories = (props) => {
 
   if (isLoad) {
     return (
-      <div>
+      <div className="loader animeLeft">
         <img src={Loader} alt="loader" />
       </div>
     );
   }
 
   return (
-    <>
-      <h1>Categories</h1>
+    <main className={`animeLeft ${Styles.categoriesMain}`}>
+      <h1>Category: {category}</h1>
       <div>
-        <img src={joke?.icon_url} alt={joke?.value} />
-        <h4>{joke?.value}</h4>
+        <h3>{joke?.value}</h3>
       </div>
-    </>
+    </main>
   );
 };
 

@@ -1,0 +1,17 @@
+.categoriesMain {
+  height: 60vh;
+  text-align: center;
+}
+
+.categoriesMain::after {
+  display: block;
+  content: '';
+  width: 200px;
+  height: 1px;
+  background: #ff0050;
+  margin: 5px auto 0;
+}
+
+.categoriesMain h1 {
+  margin-bottom: 50px;
+}
