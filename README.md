@@ -1,2 +1,3 @@
 # meliuz-react-intro
-introdução
+
+Deployed here: https://gama-chuck.vercel.app/
